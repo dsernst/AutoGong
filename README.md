@@ -11,7 +11,7 @@ An automated system to run all the gongs during a [dhamma.org](https://dhamma.or
 - [ ] 2. An option to schedule all year courses in format of day/month/year.
 - [ ] 3. Show date and time in main screen of app
 - [ ] 4. Automatic detection of non course days and play gong and doha
-- [ ] 5. A test button to play gong and doha anytime,to check the quality and sound of output from speaker.
+- [x] 5. A test button to play gong anytime, to check the quality and sound of output from speaker.
 - [ ] 6. A security passcode to change setting or edit something.
 - [ ] 7. Show day of course in main screen.
 - [ ] 8. Use time format of 12hours and date format of dd/month/year.

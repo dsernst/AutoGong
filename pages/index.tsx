@@ -1,5 +1,6 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
+import { TestButton } from '../src/TestButton'
 
 const Home: NextPage = () => {
   return (
@@ -15,6 +16,8 @@ const Home: NextPage = () => {
 
       <main>
         <h1>Welcome to Dhamma Gong!</h1>
+
+        <TestButton />
 
         <p className="description">
           Get started by editing <code>pages/index.tsx</code>
@@ -80,7 +83,7 @@ const Home: NextPage = () => {
         h1 {
           margin: 0;
           line-height: 1.15;
-          font-size: 3rem;
+          font-size: 2.5rem;
         }
 
         h1,
