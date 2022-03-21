@@ -2,7 +2,7 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import { CourseSelector } from '../src/CourseSelector'
 import { FooterLinks } from '../src/FooterLinks'
-import { TestButton } from '../src/TestButton'
+import { TestGongButton } from '../src/TestGongButton'
 
 const Home: NextPage = () => {
   return (
@@ -19,7 +19,7 @@ const Home: NextPage = () => {
       <main>
         <h1>Welcome to Dhamma Gong!</h1>
 
-        <TestButton />
+        <TestGongButton />
 
         <CourseSelector />
 

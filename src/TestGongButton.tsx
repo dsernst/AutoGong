@@ -1,6 +1,6 @@
 import { useRef, useState } from 'react'
 
-export const TestButton = () => {
+export const TestGongButton = () => {
   const audioRef = useRef<HTMLAudioElement>(null)
   const [playing, setPlaying] = useState(false)
   return (
@@ -37,7 +37,7 @@ export const TestButton = () => {
           width: 100%;
           margin: 1rem;
 
-          border: 3px solid #fffe;
+          border: 2px solid #fffe;
           border-radius: 10px;
           background: none;
           color: #fffe;
