@@ -5,7 +5,15 @@ export const TestButton = () => {
   const [playing, setPlaying] = useState(false)
   return (
     <>
-      <button onClick={() => audioRef.current?.play()}>🔈 Test Gong</button>
+      <button
+        onClick={() => {
+          const a = audioRef.current
+          !playing ? a?.play() : a?.pause()
+        }}
+      >
+        🔈 Test Gong
+      </button>
+
       <audio
         onPlay={() => setPlaying(true)}
         onPause={() => {
@@ -20,6 +28,7 @@ export const TestButton = () => {
       >
         Your browser does not support the <code>audio</code> element.
       </audio>
+
       <style jsx>{`
         button {
           font-size: 2rem;
