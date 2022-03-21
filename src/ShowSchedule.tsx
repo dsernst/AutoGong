@@ -3,6 +3,7 @@ import { convertTimes as pretty } from './convert-times'
 import { getNextTimeIndex } from './get-next-time-index'
 import { CurrentTime } from './CurrentTime'
 import { useCurrentTimeWithoutSeconds } from './useCurrentTime'
+import { NextUpCountdown } from './NextUpCountdown'
 
 export const ShowSchedule = () => {
   const nextTimeIndex = getNextTimeIndex(
@@ -32,11 +33,7 @@ export const ShowSchedule = () => {
           <span style={{ width: 77 }}>{pretty(+time)}</span>
           <span style={{ width: 26, opacity: 0.4 }}>—</span>
           <span>{amount} times</span>
-          {index === nextTimeIndex && (
-            <span style={{ marginLeft: 15, fontStyle: 'italic', opacity: 0.7 }}>
-              Starts in mm:ss
-            </span>
-          )}
+          {index === nextTimeIndex && <NextUpCountdown targetTime={+time} />}
         </p>
       ))}
 
