@@ -14,6 +14,7 @@ export const convertTimes = (times: number): string => {
 // Unit tests
 const testCases = {
   800: '8:00 am',
+  1250: '12:50 pm',
   1545: '3:45 pm',
 }
 if (typeof alert !== 'undefined') {
