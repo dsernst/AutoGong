@@ -1,37 +1,74 @@
-# Dhamma Gong
+# Web-based Dhamma Gong
 
 An automated system to run all the gongs during a [dhamma.org](https://dhamma.org) course.
 
-## The Course Timetable
+## 1st Version Requirements
 
-The following timetable for the course has been designed to maintain the continuity of practice. For best results students are advised to follow it as closely as possible.
+- [ ] 1. Types of Courses in Settings Option
+    a. 10 Day
+    b. Sattipatthana (7 Day)
+    c. 3 Day
+- [ ] 2. An option to schedule all year courses in format of day/month/year.
+- [ ] 3. Show date and time in main screen of app
+- [ ] 4. Automatic detection of non course days and play gong and doha
+- [ ] 5. A test button to play gong and doha anytime,to check the quality and sound of output from speaker.
+- [ ] 6. A security passcode to change setting or edit something.
+- [ ] 7. Show day of course in main screen.
+- [ ] 8. Use time format of 12hours and date format of dd/month/year.
+- [ ] 9. System should able to run offline once installed.
+- [ ] 10. If mobile goes off by any reason we need a autostart option for app.
+- [ ] 11. Auto launch in mobile screen after unlock.
 
-|                  |   |                                                                                  | Gong? |
-|------------------|---|----------------------------------------------------------------------------------|:-----:|
-| 4:00 am          |   | Morning wake-up bell                                                             |   *   |
-| 4:30-6:30 am     |   | Meditate in the hall or in your room                                             |   *   |
-| 6:30-8:00 am     |   | Breakfast break                                                                  |   *   |
-| 8:00-9:00 am     |   | Group meditation in the hall                                                     |   *   |
-| 9:00-11:00 am    |   | Meditate in the hall or in your room according to the teacher's instructions     |       |
-| 11:00-12:00 noon |   | Lunch break                                                                      |   *   |
-| 12 noon-1:00 pm  |   | Rest and interviews with the teacher                                             |       |
-| 1:00-2:30 pm     |   | Meditate in the hall or in your room                                             |   *   |
-| 2:30-3:30 pm     |   | Group meditation in the hall                                                     |   *   |
-| 3:30-5:00 pm     |   | Meditate in the hall or in your own room according to the teacher's instructions |       |
-| 5:00-6:00 pm     |   | Tea break                                                                        |   *   |
-| 6:00-7:00 pm     |   | Group meditation in the hall                                                     |   *   |
-| 7:00-8:15 pm     |   | Teacher's Discourse in the hall                                                  |       |
-| 8:15-9:00 pm     |   | Group meditation in the hall                                                     |       |
-| 9:00-9:30 pm     |   | Question time in the hall                                                        |       |
-| 9:30 pm          |   | Retire to your own room--Lights out                                              |       |
+## Gong timings for 3-Day & 10-Day Courses
+
+- 4 am - 8 times
+- 4:20 am - 8 times
+- 6:30 am - 3 times
+- 6:35 am - Play doha according to day of courses.
+- 7:50 am - 5 times
+- 11:00 am - 3 times
+- 12:50 pm - 5 times
+- 2:20 pm - 3 times
+- 5:00 pm - 3 times
+- 5:50 pm - 5 times
+
+### On Day 4:
+
+We need to change afternoon bell timings.
+
+Instead of 2:20pm, it will be at 1:50pm -3 times (for group sitting) and next bell will be at 5:00pm (for tea break).
+
+## Sattipatthana Course
+
+All timings are like 10-day courses except on day 3 it’s Vipassana Day, so bell timings will be like day 4 of 10 day.
+
+## Non Course Days Schedule
+
+1. 5:00 am - 5 times
+2. 6:30 am - 3 times
+    - Play random doha’s after 3 bells.
+3. 7:50 am - 5 times
+4. 9:00 am - 3 times
+5. 11:00 am - 3 times
+6. 2:00 pm - 3 times
+7. 3:00 pm - 3 times
+8. 5:00 pm - 3 times
+9. 5:50 pm - 3 times
+10. 7:00 pm - 3 times
+
+---
 
 # Development
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
 ## Getting Started
 
-First, run the development server:
+First time, install dependencies
+
+```bash
+yarn
+```
+
+Then start the development server:
 
 ```bash
 yarn dev
