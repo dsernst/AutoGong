@@ -45,7 +45,6 @@ const Home: NextPage = () => {
         main {
           min-height: 100vh;
           padding: 4rem 0;
-          flex: 1;
           display: flex;
           flex-direction: column;
           justify-content: center;
@@ -53,8 +52,6 @@ const Home: NextPage = () => {
         }
 
         h1 {
-          margin: 0;
-          line-height: 1.15;
           font-size: 2.5rem;
           text-align: center;
         }

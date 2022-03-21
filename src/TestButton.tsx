@@ -32,8 +32,9 @@ export const TestButton = () => {
       <style jsx>{`
         button {
           font-size: 2rem;
-          margin-top: 2rem;
-          padding: 0.5rem 3rem;
+          max-width: 300px;
+          width: 100%;
+          margin: 1rem;
 
           border: 3px solid #fffe;
           border-radius: 10px;
