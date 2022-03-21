@@ -1,5 +1,6 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
+import { Card } from '../src/Card'
 import { TestButton } from '../src/TestButton'
 
 const Home: NextPage = () => {
@@ -20,15 +21,11 @@ const Home: NextPage = () => {
         <TestButton />
 
         <div className="grid">
-          <a
-            href="https://github.com/dsernst/DhammaGong"
-            target="_blank"
-            className="card"
-            rel="noreferrer"
-          >
-            <h2>Code &rarr;</h2>
-            <p>View or contribute to this app&apos;s source code.</p>
-          </a>
+          <Card
+            url="https://github.com/dsernst/DhammaGong"
+            title="Code"
+            description="View or contribute to this app's source code."
+          />
         </div>
       </main>
 
@@ -75,36 +72,6 @@ const Home: NextPage = () => {
             width: 100%;
             flex-direction: column;
           }
-        }
-
-        .card {
-          margin: 1rem;
-          padding: 1.5rem;
-          text-align: left;
-          color: inherit;
-          text-decoration: none;
-          border: 1px solid #eaeaea;
-          border-radius: 10px;
-          transition: color 0.15s ease, border-color 0.15s ease;
-          max-width: 300px;
-        }
-
-        .card:hover,
-        .card:focus,
-        .card:active {
-          color: #73b4fe;
-          border-color: #73b4fe;
-        }
-
-        .card h2 {
-          margin: 0 0 1rem 0;
-          font-size: 1.5rem;
-        }
-
-        .card p {
-          margin: 0;
-          font-size: 1.25rem;
-          line-height: 1.5;
         }
       `}</style>
     </div>
