@@ -15,6 +15,7 @@ export const CurrentTime = () => (
         display: block;
         font-size: 70%;
         opacity: 0.5;
+        margin-bottom: 3px;
       }
     `}</style>
   </p>
