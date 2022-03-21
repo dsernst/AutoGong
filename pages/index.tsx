@@ -2,6 +2,7 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import { CourseSelector } from '../src/CourseSelector'
 import { FooterLinks } from '../src/FooterLinks'
+import { GlobalCSS } from '../src/GlobalCSS'
 import { TestGongButton } from '../src/TestGongButton'
 
 const Home: NextPage = () => {
@@ -53,6 +54,7 @@ const Home: NextPage = () => {
           text-align: center;
         }
       `}</style>
+      <GlobalCSS />
     </div>
   )
 }
