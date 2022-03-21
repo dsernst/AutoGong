@@ -21,11 +21,13 @@ const testCases = {
   2200: -1,
 }
 if (typeof alert !== 'undefined') {
-  Object.entries(testCases).forEach(([input, expected]) => {
+  Object.entries(testCases).find(([input, expected]) => {
     const actual = getNextTimeIndex(+input, sampleTimes)
-    if (actual !== expected)
+    if (actual !== expected) {
       alert(
         `getNextTimeIndex() unit test failure \n\nInput: ${input} \nExpected: ${expected} \nActual: ${actual}`
       )
+      return true
+    }
   })
 }
