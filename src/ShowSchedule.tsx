@@ -1,14 +1,12 @@
 import { baseGongSchedule } from './schedule'
 import { convertTimes as pretty } from './convert-times'
-import moment from 'moment'
 import { getNextTimeIndex } from './get-next-time-index'
 import { CurrentTime } from './CurrentTime'
+import { useCurrentTimeWithoutSeconds } from './useCurrentTime'
 
 export const ShowSchedule = () => {
-  const currTime = +moment().format('HHmm')
-  // const currTime = 1120
   const nextTimeIndex = getNextTimeIndex(
-    currTime,
+    useCurrentTimeWithoutSeconds(),
     Object.keys(baseGongSchedule).map(Number)
   )
   return (

@@ -1,9 +1,10 @@
-import Clock from 'react-live-clock'
+import { convertTimes as pretty } from './convert-times'
+import { useCurrentTimeWithoutSeconds } from './useCurrentTime'
 
 export const CurrentTime = () => (
   <p>
     <label>Current time:</label>
-    <Clock format={'h:mm a'} ticking />
+    {pretty(useCurrentTimeWithoutSeconds())}
 
     <style jsx>{`
       p {
