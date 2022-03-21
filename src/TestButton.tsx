@@ -25,6 +25,21 @@ export const TestButton = () => {
           font-size: 2rem;
           margin-top: 2rem;
           padding: 0.5rem 3rem;
+
+          border: 3px solid #fffe;
+          border-radius: 10px;
+          background: none;
+          color: #fffe;
+
+          cursor: pointer;
+
+          transition: background 0.15s ease, color 0.15s ease,
+            border-color 0.15s ease;
+        }
+
+        button:hover {
+          background: #fff2;
+          border-color: #fff8;
         }
       `}</style>
     </>

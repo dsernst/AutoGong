@@ -27,7 +27,7 @@ const Home: NextPage = () => {
             rel="noreferrer"
           >
             <h2>Code &rarr;</h2>
-            <p>View or Contribute to this app&apos;s source code.</p>
+            <p>View or contribute to this app&apos;s source code.</p>
           </a>
         </div>
       </main>
@@ -35,6 +35,14 @@ const Home: NextPage = () => {
       <style jsx>{`
         .container {
           padding: 0 2rem;
+          background: rgb(2, 0, 36);
+          background: linear-gradient(
+            152deg,
+            rgba(2, 0, 36, 1) 0%,
+            rgba(9, 9, 121, 1) 35%,
+            rgba(0, 212, 255, 1) 100%
+          );
+          color: hsla(0, 0%, 100%, 0.9);
         }
 
         main {
@@ -52,15 +60,6 @@ const Home: NextPage = () => {
           line-height: 1.15;
           font-size: 2.5rem;
           text-align: center;
-        }
-
-        code {
-          background: #fafafa;
-          border-radius: 5px;
-          padding: 0.75rem;
-          font-size: 1.1rem;
-          font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-            DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
         }
 
         .grid {
@@ -93,8 +92,8 @@ const Home: NextPage = () => {
         .card:hover,
         .card:focus,
         .card:active {
-          color: #0070f3;
-          border-color: #0070f3;
+          color: #73b4fe;
+          border-color: #73b4fe;
         }
 
         .card h2 {
