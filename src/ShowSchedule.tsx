@@ -1,7 +1,7 @@
 import { baseGongSchedule } from './schedule'
 import { convertTimes as pretty } from './convert-times'
 import moment from 'moment'
-import { getNextTimeIndex } from './get-next-time'
+import { getNextTimeIndex } from './get-next-time-index'
 import { CurrentTime } from './CurrentTime'
 
 export const ShowSchedule = () => {
