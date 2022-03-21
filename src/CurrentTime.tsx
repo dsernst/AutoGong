@@ -1,4 +1,4 @@
-import { convertTimes as pretty } from './convert-times'
+import { convertTimes as pretty } from './convertTimes'
 import { useCurrentTimeWithoutSeconds } from './useCurrentTime'
 
 export const CurrentTime = () => (

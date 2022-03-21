@@ -1,6 +1,6 @@
 import { baseGongSchedule } from './schedule'
-import { convertTimes as pretty } from './convert-times'
-import { getNextTimeIndex } from './get-next-time-index'
+import { convertTimes as pretty } from './convertTimes'
+import { getNextTimeIndex } from './getNextTimeIndex'
 import { CurrentTime } from './CurrentTime'
 import { useCurrentTimeWithoutSeconds } from './useCurrentTime'
 import { NextUpCountdown } from './NextUpCountdown'
