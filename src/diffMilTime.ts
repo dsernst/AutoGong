@@ -1,4 +1,5 @@
 import { milToSeconds } from './milToSeconds'
+import { unitTestArray } from './unitTest'
 
 export const diffMilTime = (targetTime: number, currentTime: number) => {
   const targetTotalSeconds = milToSeconds(targetTime)
@@ -24,14 +25,4 @@ const testCases: [[number, number], string][] = [
   [[63000, 63000], '0s'],
   [[40000, 21033], '1h49m'],
 ]
-if (typeof alert !== 'undefined') {
-  testCases.find(([input, expected]) => {
-    const actual = diffMilTime(...input)
-    if (actual !== expected) {
-      alert(
-        `diffMilTime() unit test failure \n\nInput: ${input} \nExpected: ${expected} \nActual: ${actual}`
-      )
-      return true
-    }
-  })
-}
+unitTestArray(diffMilTime, testCases)

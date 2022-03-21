@@ -1,3 +1,5 @@
+import { unitTest } from './unitTest'
+
 /** Given a military time w/ seconds like 153011 (3:30:11pm), convert it to the number of seconds since midnight. */
 export const milToSeconds = (milTime: number): number => {
   const string = `${milTime}`
@@ -17,14 +19,4 @@ const testCases = {
   10035: 1 * 60 ** 2 + 35, // 3635
   153011: 15 * 60 ** 2 + 30 * 60 + 11, // 55811
 }
-if (typeof alert !== 'undefined') {
-  Object.entries(testCases).find(([input, expected]) => {
-    const actual = milToSeconds(+input)
-    if (actual !== expected) {
-      alert(
-        `milToSeconds() unit test failure \n\nInput: ${input} \nExpected: ${expected} \nActual: ${actual}`
-      )
-      return true
-    }
-  })
-}
+unitTest(milToSeconds, testCases)

@@ -1,3 +1,5 @@
+import { unitTest } from './unitTest'
+
 /** Convert military times to common display.
  *
  * 800 -> '8:00 am'
@@ -20,14 +22,4 @@ const testCases = {
   1250: '12:50 pm',
   1545: '3:45 pm',
 }
-if (typeof alert !== 'undefined') {
-  Object.entries(testCases).find(([input, expected]) => {
-    const actual = convertTimes(+input)
-    if (actual !== expected) {
-      alert(
-        `convertTimes() unit test failure \n\nInput: ${input} \nExpected: ${expected} \nActual: ${actual}`
-      )
-      return true
-    }
-  })
-}
+unitTest(convertTimes, testCases)
