@@ -11,7 +11,7 @@ const Home: NextPage = () => {
           name="description"
           content="Automated gong for Dhamma.org courses"
         />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.png" />
       </Head>
 
       <main>
