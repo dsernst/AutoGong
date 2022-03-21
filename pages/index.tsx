@@ -1,8 +1,8 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import { Card } from '../src/Card'
 import { CourseSelector } from '../src/CourseSelector'
 import { CurrentTime } from '../src/CurrentTime'
+import { FooterLinks } from '../src/FooterLinks'
 import { TestButton } from '../src/TestButton'
 
 const Home: NextPage = () => {
@@ -26,18 +26,7 @@ const Home: NextPage = () => {
 
         <CourseSelector />
 
-        <div className="grid">
-          <Card
-            url="https://github.com/dsernst/DhammaGong/issues"
-            title="Report Issue"
-            description="Something not working as expected? Let us know."
-          />
-          <Card
-            url="https://github.com/dsernst/DhammaGong"
-            title="Code"
-            description="View or contribute to this app's source code."
-          />
-        </div>
+        <FooterLinks />
       </main>
 
       <style jsx>{`
@@ -65,21 +54,6 @@ const Home: NextPage = () => {
         h1 {
           font-size: 2.5rem;
           text-align: center;
-        }
-
-        .grid {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          flex-wrap: wrap;
-          max-width: 800px;
-        }
-
-        @media (max-width: 600px) {
-          .grid {
-            width: 100%;
-            flex-direction: column;
-          }
         }
       `}</style>
     </div>
