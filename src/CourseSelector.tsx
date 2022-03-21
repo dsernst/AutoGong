@@ -51,6 +51,11 @@ export const CourseSelector = () => {
           color: inherit;
         }
 
+        button:hover {
+          opacity: 0.9;
+          background: #ffffff08;
+        }
+
         .active {
           border-color: #fff9;
           opacity: 1;

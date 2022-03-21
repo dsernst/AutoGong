@@ -44,8 +44,7 @@ export const TestButton = () => {
 
           cursor: pointer;
 
-          transition: background 0.15s ease, color 0.15s ease,
-            border-color 0.15s ease;
+          transition: all 0.15s ease;
         }
 
         button:hover {

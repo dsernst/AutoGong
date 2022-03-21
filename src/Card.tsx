@@ -22,15 +22,20 @@ export const Card = ({
         text-decoration: none;
         border: 1px solid #fff4;
         border-radius: 10px;
-        transition: color 0.15s ease, border-color 0.15s ease;
+        transition: all 0.15s ease;
         max-width: 300px;
       }
 
       a:hover,
       a:focus,
       a:active {
-        color: #73b4fe;
-        border-color: #73b4fe;
+        color: #b7d9ff;
+        border-color: #b7d9ff;
+        background-color: #0003;
+      }
+
+      a:hover h2 {
+        color: #fffc;
       }
 
       a h2 {
