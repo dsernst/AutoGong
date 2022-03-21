@@ -16,7 +16,7 @@ export const Card = ({
     <style jsx>{`
       a {
         margin: 1rem;
-        padding: 1.5rem;
+        padding: 1.1rem;
         text-align: left;
         color: inherit;
         text-decoration: none;
@@ -34,13 +34,13 @@ export const Card = ({
       }
 
       a h2 {
-        margin: 0 0 1rem 0;
-        font-size: 1.5rem;
+        margin: 0 0 0.8rem 0;
+        font-size: 1.2rem;
       }
 
       a p {
         margin: 0;
-        font-size: 1.25rem;
+        font-size: 1.1rem;
         line-height: 1.5;
       }
     `}</style>

@@ -28,6 +28,11 @@ const Home: NextPage = () => {
 
         <div className="grid">
           <Card
+            url="https://github.com/dsernst/DhammaGong/issues"
+            title="Report Issue"
+            description="Something not working as expected? Let us know."
+          />
+          <Card
             url="https://github.com/dsernst/DhammaGong"
             title="Code"
             description="View or contribute to this app's source code."
