@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { ShowSchedule } from './ShowSchedule'
 
 const types = ['10 Day', 'Sattipathana', '3 Day']
 
@@ -19,7 +20,7 @@ export const CourseSelector = () => {
         ))}
       </div>
 
-      <p>You selected: {active}</p>
+      <ShowSchedule />
 
       <style jsx>{`
         main {
