@@ -5,7 +5,7 @@ export const TestButton = () => {
   const [playing, setPlaying] = useState(false)
   return (
     <>
-      <button onClick={() => audioRef.current?.play()}>Test Gong</button>
+      <button onClick={() => audioRef.current?.play()}>🔈 Test Gong</button>
       <audio
         onPlay={() => setPlaying(true)}
         onPause={() => {
