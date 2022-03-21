@@ -6,7 +6,7 @@ export const NextUpCountdown = ({ targetTime }: { targetTime: number }) => {
   const timeLeft = diffMilTime(timeWithSeconds, useCurrentTime())
 
   return (
-    <span style={{ marginLeft: 25, fontStyle: 'italic', opacity: 0.7 }}>
+    <span style={{ marginLeft: 13, fontFamily: 'Courier', opacity: 0.7 }}>
       {timeLeft} from now
     </span>
   )

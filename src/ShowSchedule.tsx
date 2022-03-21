@@ -30,8 +30,8 @@ export const ShowSchedule = () => {
 
       {Object.entries(baseGongSchedule).map(([time, amount], index) => (
         <p key={index}>
-          <span style={{ width: 77 }}>{pretty(+time)}</span>
-          <span style={{ width: 26, opacity: 0.4 }}>—</span>
+          <span style={{ width: 70 }}>{pretty(+time)}</span>
+          <span style={{ width: 23, opacity: 0.4 }}>—</span>
           <span>{amount} times</span>
           {index === nextTimeIndex && <NextUpCountdown targetTime={+time} />}
         </p>
