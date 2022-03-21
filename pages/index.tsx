@@ -1,6 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import { Card } from '../src/Card'
+import { CurrentTime } from '../src/CurrentTime'
 import { TestButton } from '../src/TestButton'
 
 const Home: NextPage = () => {
@@ -19,6 +20,8 @@ const Home: NextPage = () => {
         <h1>Welcome to Dhamma Gong!</h1>
 
         <TestButton />
+
+        <CurrentTime />
 
         <div className="grid">
           <Card

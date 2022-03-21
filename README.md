@@ -9,7 +9,7 @@ An automated system to run all the gongs during a [dhamma.org](https://dhamma.or
     b. Sattipatthana (7 Day)
     c. 3 Day
 - [ ] 2. An option to schedule all year courses in format of day/month/year.
-- [ ] 3. Show date and time in main screen of app
+- [-] 3. Show date and time in main screen of app
 - [ ] 4. Automatic detection of non course days and play gong and doha
 - [x] 5. A test button to play gong anytime, to check the quality and sound of output from speaker.
 - [ ] 6. A security passcode to change setting or edit something.
