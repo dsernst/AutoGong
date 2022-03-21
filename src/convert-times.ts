@@ -20,10 +20,9 @@ const testCases = {
 if (typeof alert !== 'undefined') {
   Object.entries(testCases).forEach(([input, expected]) => {
     const actual = convertTimes(+input)
-    if (actual !== expected) {
+    if (actual !== expected)
       alert(
         `convertTimes() unit test failure \n\nInput: ${input} \nExpected: ${expected} \nActual: ${actual}`
       )
-    }
   })
 }

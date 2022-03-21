@@ -1,7 +1,6 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import { CourseSelector } from '../src/CourseSelector'
-import { CurrentTime } from '../src/CurrentTime'
 import { FooterLinks } from '../src/FooterLinks'
 import { TestButton } from '../src/TestButton'
 
@@ -21,8 +20,6 @@ const Home: NextPage = () => {
         <h1>Welcome to Dhamma Gong!</h1>
 
         <TestButton />
-
-        <CurrentTime />
 
         <CourseSelector />
 
