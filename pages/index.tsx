@@ -19,10 +19,6 @@ const Home: NextPage = () => {
 
         <TestButton />
 
-        <p className="description">
-          Get started by editing <code>pages/index.tsx</code>
-        </p>
-
         <div className="grid">
           <a
             href="https://github.com/dsernst/DhammaGong"
@@ -51,32 +47,11 @@ const Home: NextPage = () => {
           align-items: center;
         }
 
-        h1 a {
-          color: #0070f3;
-          text-decoration: none;
-        }
-
-        h1 a:hover,
-        h1 a:focus,
-        h1 a:active {
-          text-decoration: underline;
-        }
-
         h1 {
           margin: 0;
           line-height: 1.15;
           font-size: 2.5rem;
-        }
-
-        h1,
-        .description {
           text-align: center;
-        }
-
-        .description {
-          margin: 4rem 0;
-          line-height: 1.5;
-          font-size: 1.5rem;
         }
 
         code {
