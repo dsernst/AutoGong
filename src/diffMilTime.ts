@@ -24,5 +24,6 @@ const testCases: [[number, number], string][] = [
   [[63000, 62000], '10m00s'],
   [[63000, 63000], '00s'],
   [[40000, 21033], '1h49m'],
+  [[50000, 40000], '1h0m'], // useScheduledAudio checks for 'm'
 ]
 unitTestArray(diffMilTime, testCases)
