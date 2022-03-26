@@ -19,11 +19,11 @@ export const ShowSchedule = () => {
           <p className="no-more">🛏️ &nbsp;No more gongs left today.</p>
         </div>
       ) : (
-        <defs>
+        <aside>
           ⚠️ Warning — Still a Work-in-Progress
           <br />
           Gongs do not play automatically yet!
-        </defs>
+        </aside>
       )}
 
       <h2>Gong Schedule</h2>
@@ -38,7 +38,7 @@ export const ShowSchedule = () => {
       ))}
 
       <style jsx>{`
-        defs {
+        aside {
           margin-top: 1.5rem;
           display: block;
           font-style: italic;
