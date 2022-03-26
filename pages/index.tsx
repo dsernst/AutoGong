@@ -1,6 +1,6 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import { CourseSelector } from '../src/CourseSelector'
+import { GetStartedButton } from '../src/GetStartedButton'
 import { FooterLinks } from '../src/FooterLinks'
 import { GlobalCSS } from '../src/GlobalCSS'
 import { TestGongButton } from '../src/TestGongButton'
@@ -22,7 +22,7 @@ const Home: NextPage = () => {
 
         <TestGongButton />
 
-        <CourseSelector />
+        <GetStartedButton />
 
         <FooterLinks />
       </main>

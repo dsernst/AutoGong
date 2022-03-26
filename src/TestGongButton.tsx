@@ -1,18 +1,18 @@
 import { useRef, useState } from 'react'
+import { Button } from './Button'
 
 export const TestGongButton = () => {
   const audioRef = useRef<HTMLAudioElement>(null)
   const [playing, setPlaying] = useState(false)
   return (
     <>
-      <button
+      <Button
         onClick={() => {
           const a = audioRef.current
           !playing ? a?.play() : a?.pause()
         }}
-      >
-        🔈 Test Gong
-      </button>
+        text="🔈 Test Gong"
+      />
 
       <audio
         onPlay={() => setPlaying(true)}
@@ -28,30 +28,6 @@ export const TestGongButton = () => {
       >
         Your browser does not support the <code>audio</code> element.
       </audio>
-
-      <style jsx>{`
-        button {
-          font-size: 2rem;
-          max-width: 300px;
-          padding: 7px 0;
-          width: 100%;
-          margin: 1rem;
-
-          border: 2px solid #fffe;
-          border-radius: 10px;
-          background: none;
-          color: #fffe;
-
-          cursor: pointer;
-
-          transition: all 0.15s ease;
-        }
-
-        button:hover {
-          background: #fff2;
-          border-color: #fff8;
-        }
-      `}</style>
     </>
   )
 }
