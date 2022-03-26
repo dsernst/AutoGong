@@ -5,7 +5,13 @@ import { useScheduledAudio } from './useScheduledAudio'
 export const NextUpCountdown = ({ targetTime }: { targetTime: number }) => {
   const timeWithSeconds = targetTime * 100
   const timeLeft = diffMilTime(timeWithSeconds, useCurrentTime())
-  useScheduledAudio(timeLeft)
+  const { playing, isAnotherPlaying } = useScheduledAudio(timeLeft)
+
+  // Wait for another to finish playing before showing countdown
+  if (isAnotherPlaying) return null
+
+  // Don't show negative times
+  if (!playing && timeLeft.includes('-')) return null
 
   return (
     <span
@@ -16,7 +22,7 @@ export const NextUpCountdown = ({ targetTime }: { targetTime: number }) => {
         fontStyle: 'italic',
       }}
     >
-      {timeLeft} from now
+      {playing ? 'Playing' : `${timeLeft} from now`}
     </span>
   )
 }

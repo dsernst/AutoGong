@@ -1,16 +1,6 @@
-let nextUp: null | ReturnType<typeof setTimeout> = null
+import { useEffect, useState } from 'react'
 
-export const useScheduledAudio = (timeLeft: string) => {
-  // If we don't already have something enqueued,
-  if (!nextUp) {
-    // and something needs to start in the next 60 seconds
-    if (!timeLeft.includes('m')) {
-      // enqueue it.
-      const secondsLeft = timeLeft.split('s')[0]
-      enqueueGong(+secondsLeft)
-    }
-  }
-}
+let nextTimeout: null | ReturnType<typeof setTimeout> = null
 
 let audio: HTMLAudioElement
 if (typeof window !== 'undefined') {
@@ -18,15 +8,36 @@ if (typeof window !== 'undefined') {
   console.log('💁 Initialized audio')
 }
 
-const enqueueGong = (secondsLeft: number) => {
-  console.log('Enqueuing to start in', secondsLeft, 'seconds')
-  nextUp = setTimeout(() => {
-    audio.play()
-    console.log('🎶 Playing')
+let areAnyPlaying = false
 
-    // Wait a few seconds then clear nextUp
-    setTimeout(() => {
-      nextUp = null
-    }, 5 * 1000)
-  }, secondsLeft * 1000)
+export const useScheduledAudio = (timeLeft: string) => {
+  const [playing, setPlaying] = useState(false)
+
+  useEffect(() => {
+    // If we don't already have something enqueued,
+    if (!nextTimeout) {
+      // and something needs to start in the next 60 seconds
+      if (!timeLeft.includes('m')) {
+        // Enqueue it!
+        const secondsLeft = +timeLeft.split('s')[0]
+
+        console.log('Enqueuing to start in', secondsLeft, 'seconds')
+        nextTimeout = setTimeout(() => {
+          audio.play()
+          console.log('🎶 Playing')
+          setPlaying(true)
+          areAnyPlaying = true
+
+          audio.onpause = () => {
+            console.log('Done playing 👍')
+            setPlaying(false)
+            areAnyPlaying = false
+            nextTimeout = null
+          }
+        }, secondsLeft * 1000)
+      }
+    }
+  })
+
+  return { playing, isAnotherPlaying: areAnyPlaying && !playing }
 }
