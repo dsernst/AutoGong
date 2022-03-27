@@ -1,7 +1,9 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
+
 import { GetStartedButton } from '../src/GetStartedButton'
 import { GlobalCSS } from '../src/GlobalCSS'
+import { SafariWarning } from '../src/SafariWarning'
 
 const Home: NextPage = () => {
   return (
@@ -15,6 +17,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.png" />
       </Head>
 
+      <SafariWarning />
       <GetStartedButton />
 
       <style jsx>{`
