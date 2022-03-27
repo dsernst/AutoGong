@@ -4,8 +4,8 @@ import { DaySelector } from './DaySelector'
 import { ShowSchedule } from './ShowSchedule'
 
 const types = [
-  { name: '10 Day', max: 10 },
-  { name: 'Satti<wbr>pathana', max: 7 },
+  { name: '10 Day', max: 10, vipassanaDay: 4 },
+  { name: 'Satti<wbr>pathana', max: 7, vipassanaDay: 3 },
   { name: '3 Day', max: 3 },
   { name: 'Non Course', max: 0 },
 ]
@@ -39,7 +39,9 @@ export const CourseSelector = () => {
         <CurrentTime />
       </div>
 
-      <ShowSchedule />
+      <ShowSchedule
+        isVipassanaDay={day === types[selectedCourseIndex].vipassanaDay}
+      />
 
       <style jsx>{`
         section {

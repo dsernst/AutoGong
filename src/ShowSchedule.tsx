@@ -4,7 +4,11 @@ import { getNextTimeIndex } from './getNextTimeIndex'
 import { useCurrentTimeWithoutSeconds } from './useCurrentTime'
 import { NextUpCountdown } from './NextUpCountdown'
 
-export const ShowSchedule = () => {
+export const ShowSchedule = ({
+  isVipassanaDay,
+}: {
+  isVipassanaDay: boolean
+}) => {
   const nextTimeIndex = getNextTimeIndex(
     useCurrentTimeWithoutSeconds(),
     Object.keys(baseGongSchedule).map(Number)
@@ -17,7 +21,7 @@ export const ShowSchedule = () => {
         </div>
       )}
 
-      <h2>Gong Schedule</h2>
+      <h2>{isVipassanaDay ? 'Vipassana Day ' : ''}Gong Schedule</h2>
 
       {Object.entries(baseGongSchedule).map(([time, amount], index) => (
         <p key={index}>
