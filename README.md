@@ -12,22 +12,26 @@ An automated system to run all the gongs during a [dhamma.org](https://dhamma.or
     c. 3 Day
     d. Non Course
 - [x] 4. Show the gong schedule for that course
-- [x] 5. Show day of course in main screen.
+- [x] 5. Show adjustable course Day
 - [x] 6. Custom gong schedules on Vipassana Days & for Non Course days
-- [x] 7. Play the right # of gongs, automatically at the scheduled time.
-- [x] 8. Show countdown to next gong, or if currently playing, what fraction of gongs have played so far
-- [x] 9. System should able to run offline once installed.
-- [ ] 10. Automatically increment the Day counter at midnight
-- [ ] 11. Show the current date
-- [ ] 12. An option to schedule all year courses in format of day/month/year.
-- [ ] 13. Play doha's according to the day of the course
-- [ ] 14. Play random doha each day for Non Courses
-- [ ] 15. A security passcode to change setting or edit something.
+- [x] 7. Play the right # of gongs, automatically at the scheduled time
+- [x] 8. Highlight next gong w/ countdown, or if currently playing, how many have played already
+- [x] 9. System should able to run offline once installed
+- [x] 10. Link to app's source code
+- [x] 11. Link to review or Report Issue, if anything not working
+- [x] 12. Detect & warn about incompatibility if they're using Safari, which blocks scheduled audio
+- [ ] 13. Better domain name than https://dhamma-gong.vercel.app/
+- [ ] 14. Automatically increment the Day counter at midnight
+- [ ] 15. Show the current date
+- [ ] 16. An option to schedule all year courses in format of day/month/year
+- [ ] 17. Play doha's according to the day of the course
+- [ ] 18. Play random doha each day for Non Courses
+- [ ] 19. A security passcode to lock settings
 
 Unclear:
 
-- [ ] 16. If mobile goes off by any reason we need an autostart option for app.
-- [ ] 17. Auto launch in mobile screen after unlock.
+- [ ] 20. If mobile goes off by any reason we need an autostart option for app.
+- [ ] 21. Auto launch in mobile screen after unlock.
 
 
 ## Gong timings for 3-Day & 10-Day Courses
