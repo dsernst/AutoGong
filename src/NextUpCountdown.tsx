@@ -3,15 +3,15 @@ import { useCurrentTime } from './useCurrentTime'
 import { useScheduledAudio } from './useScheduledAudio'
 
 export const NextUpCountdown = ({
-  targetTime,
   amount,
+  targetTime,
 }: {
   amount: number,
   targetTime: number
 }) => {
   const timeWithSeconds = targetTime * 100
   const timeLeft = diffMilTime(timeWithSeconds, useCurrentTime())
-  const { amountDone, playing, isAnotherPlaying } = useScheduledAudio(
+  const { amountDone, isAnotherPlaying, playing } = useScheduledAudio(
     timeLeft,
     amount
   )

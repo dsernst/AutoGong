@@ -1,7 +1,7 @@
 export const DaySelector = ({
-  setDay,
   day,
   max,
+  setDay,
 }: {
   day: number,
   max: number,
