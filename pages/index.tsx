@@ -5,7 +5,7 @@ import { GlobalCSS } from '../src/GlobalCSS'
 
 const Home: NextPage = () => {
   return (
-    <div className="container">
+    <main>
       <Head>
         <title>Dhamma Gong</title>
         <meta
@@ -15,15 +15,10 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.png" />
       </Head>
 
-      <main>
-        <h1>Welcome to Dhamma Gong!</h1>
-
-        <GetStartedButton />
-      </main>
+      <GetStartedButton />
 
       <style jsx>{`
-        .container {
-          padding: 0 2rem;
+        main {
           background: rgb(2, 0, 36);
           background: linear-gradient(
             152deg,
@@ -32,24 +27,16 @@ const Home: NextPage = () => {
             rgba(0, 212, 255, 1) 100%
           );
           color: hsla(0, 0%, 100%, 0.9);
-        }
-
-        main {
           min-height: 100vh;
-          padding: 4rem 0;
+          padding: 4rem 2rem;
           display: flex;
           flex-direction: column;
           justify-content: center;
           align-items: center;
         }
-
-        h1 {
-          font-size: 2.5rem;
-          text-align: center;
-        }
       `}</style>
       <GlobalCSS />
-    </div>
+    </main>
   )
 }
 
