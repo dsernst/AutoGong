@@ -3,8 +3,8 @@ export const Card = ({
   title,
   url,
 }: {
-  description: string,
-  title: string,
+  description: string
+  title: string
   url: string
 }) => (
   <>

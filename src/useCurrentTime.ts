@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useEffect, useState } from 'react'
 
 /** React hook with the current time, updating every second. Displayed as HHmmss, e.g. 3:30:11pm = 153011. */
 export function useCurrentTime(): number {

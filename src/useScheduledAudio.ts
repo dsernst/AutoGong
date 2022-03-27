@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 let nextTimeout: null | ReturnType<typeof setTimeout> = null
 let areAnyPlaying = false

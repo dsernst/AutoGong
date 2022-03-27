@@ -13,7 +13,7 @@ export const NextUpCountdown = ({
   const timeLeft = diffMilTime(timeWithSeconds, useCurrentTime())
   const { amountDone, isAnotherPlaying, playing } = useScheduledAudio(
     timeLeft,
-    amount
+    amount,
   )
 
   // Wait for another to finish playing before showing countdown

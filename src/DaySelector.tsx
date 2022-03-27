@@ -3,8 +3,8 @@ export const DaySelector = ({
   max,
   setDay,
 }: {
-  day: number,
-  max: number,
+  day: number
+  max: number
   setDay: (update: (d: number) => number) => void
 }) => {
   return (

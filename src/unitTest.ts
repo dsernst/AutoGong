@@ -1,13 +1,13 @@
 export const unitTest = <Output>(
   functionToTest: (input: number) => Output,
-  testCases: Record<number, Output>
+  testCases: Record<number, Output>,
 ) => {
   testAll(Object.entries(testCases), functionToTest)
 }
 
 export const unitTestArray = <Input, Output>(
   functionToTest: (...args: Input[]) => Output,
-  testCases: [Input[], Output][]
+  testCases: [Input[], Output][],
 ) => {
   testAll(testCases, functionToTest)
 }
@@ -15,7 +15,7 @@ export const unitTestArray = <Input, Output>(
 function testAll<Output>(
   cases: [unknown[] | string, Output][],
   // eslint-disable-next-line @typescript-eslint/ban-types
-  functionToTest: Function
+  functionToTest: Function,
 ): void {
   let passed = 0
 

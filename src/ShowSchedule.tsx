@@ -1,8 +1,8 @@
-import { baseGongSchedule, vipassanaDaySchedule } from './schedule'
 import { convertTimes as pretty } from './convertTimes'
 import { getNextTimeIndex } from './getNextTimeIndex'
-import { useCurrentTimeWithoutSeconds } from './useCurrentTime'
 import { NextUpCountdown } from './NextUpCountdown'
+import { baseGongSchedule, vipassanaDaySchedule } from './schedule'
+import { useCurrentTimeWithoutSeconds } from './useCurrentTime'
 
 export const ShowSchedule = ({
   isVipassanaDay,
@@ -13,7 +13,7 @@ export const ShowSchedule = ({
 
   const nextTimeIndex = getNextTimeIndex(
     useCurrentTimeWithoutSeconds(),
-    Object.keys(schedule).map(Number)
+    Object.keys(schedule).map(Number),
   )
   return (
     <section>
@@ -36,7 +36,7 @@ export const ShowSchedule = ({
                 <NextUpCountdown {...{ amount, targetTime: +time }} />
               )}
             </p>
-          )
+          ),
       )}
 
       <style jsx>{`
