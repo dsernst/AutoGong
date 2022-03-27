@@ -1,9 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import { GetStartedButton } from '../src/GetStartedButton'
-import { FooterLinks } from '../src/FooterLinks'
 import { GlobalCSS } from '../src/GlobalCSS'
-import { TestGongButton } from '../src/TestGongButton'
 
 const Home: NextPage = () => {
   return (
@@ -20,11 +18,7 @@ const Home: NextPage = () => {
       <main>
         <h1>Welcome to Dhamma Gong!</h1>
 
-        <TestGongButton />
-
         <GetStartedButton />
-
-        <FooterLinks />
       </main>
 
       <style jsx>{`

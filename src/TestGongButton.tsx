@@ -22,8 +22,7 @@ export const TestGongButton = () => {
           audioRef.current?.currentTime = 0
         }}
         controls={playing}
-        src="./gong-3.mp3"
-        autoPlay
+        src="./gong-1.mp3"
         ref={audioRef}
       >
         Your browser does not support the <code>audio</code> element.

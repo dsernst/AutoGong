@@ -14,16 +14,10 @@ export const ShowSchedule = () => {
     <main>
       <CurrentTime />
 
-      {nextTimeIndex === -1 ? (
+      {nextTimeIndex === -1 && (
         <div style={{ textAlign: 'center' }}>
           <p className="no-more">🛏️ &nbsp;No more gongs left today.</p>
         </div>
-      ) : (
-        <aside>
-          ⚠️ Warning — Still a Work-in-Progress
-          <br />
-          Gongs do not play automatically yet!
-        </aside>
       )}
 
       <h2>Gong Schedule</h2>
@@ -40,12 +34,6 @@ export const ShowSchedule = () => {
       ))}
 
       <style jsx>{`
-        aside {
-          margin-top: 1.5rem;
-          display: block;
-          font-style: italic;
-        }
-
         .no-more {
           border: 1px solid #fff3;
           display: inline-block;
