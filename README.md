@@ -2,6 +2,8 @@
 
 An automated system to run all the gongs during a [dhamma.org](https://dhamma.org) course.
 
+<img src="./public/broz-screenshot.png" alt="screenshot" width="300px" />
+
 ## 1st Version Requirements
 
 - [x] 1. A test button to play gong anytime, to check the quality and sound of output from speaker.
