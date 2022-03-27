@@ -2,10 +2,19 @@ import { diffMilTime } from './diffMilTime'
 import { useCurrentTime } from './useCurrentTime'
 import { useScheduledAudio } from './useScheduledAudio'
 
-export const NextUpCountdown = ({ targetTime }: { targetTime: number }) => {
+export const NextUpCountdown = ({
+  targetTime,
+  amount,
+}: {
+  targetTime: number
+  amount: number
+}) => {
   const timeWithSeconds = targetTime * 100
   const timeLeft = diffMilTime(timeWithSeconds, useCurrentTime())
-  const { playing, isAnotherPlaying } = useScheduledAudio(timeLeft)
+  const { amountDone, playing, isAnotherPlaying } = useScheduledAudio(
+    timeLeft,
+    amount
+  )
 
   // Wait for another to finish playing before showing countdown
   if (isAnotherPlaying) return null
@@ -22,7 +31,7 @@ export const NextUpCountdown = ({ targetTime }: { targetTime: number }) => {
         fontStyle: 'italic',
       }}
     >
-      {playing ? 'Playing' : `${timeLeft} from now`}
+      {playing ? `Playing ${amountDone} of ${amount}` : `${timeLeft} from now`}
     </span>
   )
 }

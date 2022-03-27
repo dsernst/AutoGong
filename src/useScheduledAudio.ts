@@ -1,17 +1,12 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useRef } from 'react'
 
 let nextTimeout: null | ReturnType<typeof setTimeout> = null
-
-let audio: HTMLAudioElement
-if (typeof window !== 'undefined') {
-  audio = new Audio('./gong-3.mp3')
-  console.log('💁 Initialized audio')
-}
-
 let areAnyPlaying = false
 
-export const useScheduledAudio = (timeLeft: string) => {
+export const useScheduledAudio = (timeLeft: string, amount: number) => {
   const [playing, setPlaying] = useState(false)
+  const [amountDone, setAmountDone] = useState(1)
+  const audio = useRef(new Audio('./gong-1.mp3'))
 
   useEffect(() => {
     // If we don't already have something enqueued,
@@ -21,23 +16,31 @@ export const useScheduledAudio = (timeLeft: string) => {
         // Enqueue it!
         const secondsLeft = +timeLeft.split('s')[0]
 
-        console.log('Enqueuing to start in', secondsLeft, 'seconds')
+        console.log('Enqueuing', amount, 'to start in', secondsLeft, 'seconds')
         nextTimeout = setTimeout(() => {
-          audio.play()
           console.log('🎶 Playing')
           setPlaying(true)
           areAnyPlaying = true
-
-          audio.onpause = () => {
-            console.log('Done playing 👍')
-            setPlaying(false)
-            areAnyPlaying = false
-            nextTimeout = null
-          }
-        }, secondsLeft * 1000)
+          audio.current.play()
+        }, secondsLeft * 1000 - 500)
       }
     }
   })
 
-  return { playing, isAnotherPlaying: areAnyPlaying && !playing }
+  useEffect(() => {
+    audio.current.onpause = () => {
+      setAmountDone((d) => d + 1)
+      console.log('Did', amountDone, 'of', amount)
+      if (amountDone < amount) {
+        audio.current.play()
+      } else {
+        console.log('All done playing 👍')
+        setPlaying(false)
+        areAnyPlaying = false
+        nextTimeout = null
+      }
+    }
+  }, [amount, amountDone])
+
+  return { amountDone, playing, isAnotherPlaying: areAnyPlaying && !playing }
 }
