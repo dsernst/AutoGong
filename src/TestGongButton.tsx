@@ -18,8 +18,7 @@ export const TestGongButton = () => {
         onPlay={() => setPlaying(true)}
         onPause={() => {
           setPlaying(false)
-          // @ts-ignore - typescript is wrong, its fine to assign here
-          audioRef.current?.currentTime = 0
+          if (audioRef.current) audioRef.current.currentTime = 0
         }}
         controls={playing}
         src="./gong-1.mp3"

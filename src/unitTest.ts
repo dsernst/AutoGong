@@ -14,6 +14,7 @@ export const unitTestArray = <Input, Output>(
 
 function testAll<Output>(
   cases: [unknown[] | string, Output][],
+  // eslint-disable-next-line @typescript-eslint/ban-types
   functionToTest: Function
 ): void {
   let passed = 0
@@ -37,6 +38,7 @@ function testAll<Output>(
       // Quit .find() loop early
       return true
     } else {
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
       passed++
 
       // // Uncomment to print individual tests that pass
