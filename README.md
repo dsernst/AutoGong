@@ -20,15 +20,24 @@ An automated system to run all the gongs during a [dhamma.org](https://dhamma.or
 - [x] 10. Link to app's source code
 - [x] 11. Link to review or Report Issue, if anything not working
 - [x] 12. Detect & warn about incompatibility if they're using Safari, which blocks scheduled audio
-- [ ] 13. Better domain name than https://dhamma-gong.vercel.app/
-- [ ] 14. Automatically increment the Day counter at midnight
-- [ ] 15. Show the current date
-- [ ] 16. An option to schedule all year courses in format of day/month/year
-- [ ] 17. Play doha's according to the day of the course
-- [ ] 18. Play random doha each day for Non Courses
-- [ ] 19. A security passcode to lock settings
+- [ ] 13. Play doha's according to the day of the course
+- [ ] 14. Play random doha each day for Non Courses
 
-Unclear:
+### With above complete, can fully automate 1 day
+
+- [ ] 15. Automatically increment the Day counter at midnight
+
+### With above complete, can fully automate 1 course
+
+- [ ] 16. Show the current date
+- [ ] 17. An option to schedule all year courses in format of day/month/year
+
+### With above complete, can fully automate 1 year
+
+- [ ] 18. A security passcode to lock settings
+- [ ] 19. Better domain name than https://dhamma-gong.vercel.app/
+
+### Unclear requirements:
 
 - [ ] 20. If mobile goes off by any reason we need an autostart option for app.
 - [ ] 21. Auto launch in mobile screen after unlock.
