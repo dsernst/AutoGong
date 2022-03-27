@@ -1,15 +1,25 @@
 import { convertTimes as pretty } from './convertTimes'
 import { getNextTimeIndex } from './getNextTimeIndex'
 import { NextUpCountdown } from './NextUpCountdown'
-import { baseGongSchedule, vipassanaDaySchedule } from './schedule'
+import {
+  baseGongSchedule,
+  nonCourseSchedule,
+  vipassanaDaySchedule,
+} from './schedule'
 import { useCurrentTimeWithoutSeconds } from './useCurrentTime'
 
 export const ShowSchedule = ({
+  isNonCourse,
   isVipassanaDay,
 }: {
+  isNonCourse: boolean
   isVipassanaDay: boolean
 }) => {
-  const schedule = isVipassanaDay ? vipassanaDaySchedule : baseGongSchedule
+  const schedule = isNonCourse
+    ? nonCourseSchedule
+    : isVipassanaDay
+    ? vipassanaDaySchedule
+    : baseGongSchedule
 
   const nextTimeIndex = getNextTimeIndex(
     useCurrentTimeWithoutSeconds(),
@@ -23,7 +33,11 @@ export const ShowSchedule = ({
         </div>
       )}
 
-      <h2>{isVipassanaDay ? 'Vipassana Day ' : ''}Gong Schedule</h2>
+      <h2>
+        {isVipassanaDay ? 'Vipassana Day ' : ''}
+        {isNonCourse ? 'Non Course ' : ''}
+        Gong Schedule
+      </h2>
 
       {Object.entries(schedule).map(
         ([time, amount], index) =>

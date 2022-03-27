@@ -15,3 +15,16 @@ export const vipassanaDaySchedule = {
   1350: 3,
   1420: undefined,
 }
+
+export const nonCourseSchedule = {
+  500: 5,
+  630: 3,
+  750: 5,
+  900: 3,
+  1100: 3,
+  1400: 3,
+  1500: 3,
+  1700: 3,
+  1750: 3,
+  1900: 3,
+}

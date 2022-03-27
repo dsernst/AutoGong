@@ -41,6 +41,7 @@ export const CourseSelector = () => {
       </div>
 
       <ShowSchedule
+        isNonCourse={selectedCourseIndex === 3}
         isVipassanaDay={day === types[selectedCourseIndex].vipassanaDay}
       />
 
