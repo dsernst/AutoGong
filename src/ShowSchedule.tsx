@@ -1,7 +1,6 @@
 import { baseGongSchedule } from './schedule'
 import { convertTimes as pretty } from './convertTimes'
 import { getNextTimeIndex } from './getNextTimeIndex'
-import { CurrentTime } from './CurrentTime'
 import { useCurrentTimeWithoutSeconds } from './useCurrentTime'
 import { NextUpCountdown } from './NextUpCountdown'
 
@@ -12,8 +11,6 @@ export const ShowSchedule = () => {
   )
   return (
     <section>
-      <CurrentTime />
-
       {nextTimeIndex === -1 && (
         <div style={{ textAlign: 'center' }}>
           <p className="no-more">🛏️ &nbsp;No more gongs left today.</p>

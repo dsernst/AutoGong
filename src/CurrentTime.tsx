@@ -2,12 +2,12 @@ import { convertTimes as pretty } from './convertTimes'
 import { useCurrentTimeWithoutSeconds } from './useCurrentTime'
 
 export const CurrentTime = () => (
-  <p>
+  <div>
     <label>Current time:</label>
     {pretty(useCurrentTimeWithoutSeconds())}
 
     <style jsx>{`
-      p {
+      div {
         font-size: 1.5rem;
         text-align: center;
       }
@@ -16,8 +16,8 @@ export const CurrentTime = () => (
         display: block;
         font-size: 70%;
         opacity: 0.5;
-        margin-bottom: 3px;
+        margin-bottom: 9px;
       }
     `}</style>
-  </p>
+  </div>
 )

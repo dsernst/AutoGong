@@ -8,8 +8,8 @@ export const DaySelector = ({
   max: number
 }) => {
   return (
-    <>
-      <p>Day:</p>
+    <div>
+      <label>Day:</label>
       <button disabled={day <= 0} onClick={() => setDay((d) => d - 1)}>
         -
       </button>
@@ -19,13 +19,16 @@ export const DaySelector = ({
       </button>
 
       <style jsx>{`
-        p {
+        label {
+          display: block;
+          align-self: flex-start;
           opacity: 0.5;
+          margin-bottom: 5px;
         }
 
         button,
         input {
-          height: 3rem;
+          height: 2.7rem;
           background: none;
           color: #fff;
           border: 1px solid #fff5;
@@ -45,11 +48,11 @@ export const DaySelector = ({
         }
 
         button {
-          width: 3rem;
+          width: 2.7rem;
         }
 
         input {
-          width: 100px;
+          width: 60px;
         }
 
         /* Hide type=number control arrows */
@@ -64,6 +67,6 @@ export const DaySelector = ({
           -moz-appearance: textfield;
         }
       `}</style>
-    </>
+    </div>
   )
 }

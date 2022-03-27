@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { CurrentTime } from './CurrentTime'
 import { DaySelector } from './DaySelector'
 import { ShowSchedule } from './ShowSchedule'
 
@@ -16,7 +17,7 @@ export const CourseSelector = () => {
   return (
     <section>
       <label>Course type:</label>
-      <div>
+      <div className="course-buttons">
         {types.map(({ name }, index) => (
           <button
             key={name}
@@ -30,7 +31,13 @@ export const CourseSelector = () => {
         ))}
       </div>
 
-      <DaySelector {...{ day, setDay }} max={types[selectedCourseIndex].max} />
+      <div className="day-and-time">
+        <DaySelector
+          {...{ day, setDay }}
+          max={types[selectedCourseIndex].max}
+        />
+        <CurrentTime />
+      </div>
 
       <ShowSchedule />
 
@@ -48,7 +55,7 @@ export const CourseSelector = () => {
           padding-left: 1rem;
         }
 
-        div {
+        .course-buttons {
           display: flex;
           overflow-x: scroll;
         }
@@ -74,6 +81,12 @@ export const CourseSelector = () => {
         .active {
           border-color: #fff9;
           opacity: 1;
+        }
+
+        .day-and-time {
+          display: flex;
+          margin: 2rem 0;
+          justify-content: space-around;
         }
       `}</style>
     </section>
