@@ -4,20 +4,31 @@ An automated system to run all the gongs during a [dhamma.org](https://dhamma.or
 
 ## 1st Version Requirements
 
-- [x] 1. Types of Courses in Settings Option
+- [x] 1. A test button to play gong anytime, to check the quality and sound of output from speaker.
+- [x] 2. Show the current time
+- [x] 3. Select the type of course
     a. 10 Day
     b. Sattipatthana (7 Day)
     c. 3 Day
-- [ ] 2. An option to schedule all year courses in format of day/month/year.
-- [-] 3. Show date and time in main screen of app
-- [ ] 4. Automatic detection of non course days and play gong and doha
-- [x] 5. A test button to play gong anytime, to check the quality and sound of output from speaker.
-- [ ] 6. A security passcode to change setting or edit something.
-- [x] 7. Show day of course in main screen.
-- [x] 8. Use time format of 12hours and date format of dd/month/year.
+    d. Non Course
+- [x] 4. Show the gong schedule for that course
+- [x] 5. Show day of course in main screen.
+- [x] 6. Custom gong schedules on Vipassana Days & for Non Course days
+- [x] 7. Play the right # of gongs, automatically at the scheduled time.
+- [x] 8. Show countdown to next gong, or if currently playing, what fraction of gongs have played so far
 - [x] 9. System should able to run offline once installed.
-- [ ] 10. If mobile goes off by any reason we need a autostart option for app.
-- [ ] 11. Auto launch in mobile screen after unlock.
+- [ ] 10. Automatically increment the Day counter at midnight
+- [ ] 11. Show the current date
+- [ ] 12. An option to schedule all year courses in format of day/month/year.
+- [ ] 13. Play doha's according to the day of the course
+- [ ] 14. Play random doha each day for Non Courses
+- [ ] 15. A security passcode to change setting or edit something.
+
+Unclear:
+
+- [ ] 16. If mobile goes off by any reason we need an autostart option for app.
+- [ ] 17. Auto launch in mobile screen after unlock.
+
 
 ## Gong timings for 3-Day & 10-Day Courses
 
