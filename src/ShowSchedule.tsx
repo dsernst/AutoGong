@@ -11,7 +11,7 @@ export const ShowSchedule = () => {
     Object.keys(baseGongSchedule).map(Number)
   )
   return (
-    <main>
+    <section>
       <CurrentTime />
 
       {nextTimeIndex === -1 && (
@@ -34,6 +34,10 @@ export const ShowSchedule = () => {
       ))}
 
       <style jsx>{`
+        section {
+          padding: 0 2rem;
+        }
+
         .no-more {
           border: 1px solid #fff3;
           display: inline-block;
@@ -47,6 +51,6 @@ export const ShowSchedule = () => {
           display: inline-block;
         }
       `}</style>
-    </main>
+    </section>
   )
 }

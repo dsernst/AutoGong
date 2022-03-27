@@ -28,7 +28,7 @@ const Home: NextPage = () => {
           );
           color: hsla(0, 0%, 100%, 0.9);
           min-height: 100vh;
-          padding: 4rem 2rem;
+          padding: 4rem 0;
           display: flex;
           flex-direction: column;
           justify-content: center;

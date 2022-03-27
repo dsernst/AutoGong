@@ -1,12 +1,12 @@
 import { useState } from 'react'
 import { ShowSchedule } from './ShowSchedule'
 
-const types = ['10 Day', 'Sattipathana', '3 Day']
+const types = ['10 Day', 'Satti<wbr>pathana', '3 Day', 'Non Course']
 
 export const CourseSelector = () => {
   const [active, setActive] = useState(types[0])
   return (
-    <main>
+    <section>
       <label>Course type:</label>
       <div>
         {types.map((type) => (
@@ -14,17 +14,17 @@ export const CourseSelector = () => {
             key={type}
             className={active === type ? 'active' : ''}
             onClick={() => setActive(type)}
-          >
-            {type}
-          </button>
+            dangerouslySetInnerHTML={{ __html: type }}
+          />
         ))}
       </div>
 
       <ShowSchedule />
 
       <style jsx>{`
-        main {
+        section {
           margin: 2rem 0;
+          max-width: 100%;
         }
 
         label {
@@ -32,10 +32,12 @@ export const CourseSelector = () => {
           align-self: flex-start;
           opacity: 0.5;
           margin-bottom: 5px;
+          padding-left: 1rem;
         }
 
         div {
           display: flex;
+          overflow-x: scroll;
         }
 
         button {
@@ -61,6 +63,6 @@ export const CourseSelector = () => {
           opacity: 1;
         }
       `}</style>
-    </main>
+    </section>
   )
 }
