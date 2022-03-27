@@ -2,25 +2,35 @@ import { useState } from 'react'
 import { DaySelector } from './DaySelector'
 import { ShowSchedule } from './ShowSchedule'
 
-const types = ['10 Day', 'Satti<wbr>pathana', '3 Day', 'Non Course']
+const types = [
+  { name: '10 Day', max: 10 },
+  { name: 'Satti<wbr>pathana', max: 7 },
+  { name: '3 Day', max: 3 },
+  { name: 'Non Course', max: 0 },
+]
 
 export const CourseSelector = () => {
-  const [active, setActive] = useState(types[0])
+  const [selectedCourseIndex, setSelectedCourseIndex] = useState(0)
+  const [day, setDay] = useState(0)
+
   return (
     <section>
       <label>Course type:</label>
       <div>
-        {types.map((type) => (
+        {types.map(({ name }, index) => (
           <button
-            key={type}
-            className={active === type ? 'active' : ''}
-            onClick={() => setActive(type)}
-            dangerouslySetInnerHTML={{ __html: type }}
+            key={name}
+            className={selectedCourseIndex === index ? 'active' : ''}
+            onClick={() => {
+              setSelectedCourseIndex(index)
+              setDay(0)
+            }}
+            dangerouslySetInnerHTML={{ __html: name }}
           />
         ))}
       </div>
 
-      <DaySelector max={10} />
+      <DaySelector {...{ day, setDay }} max={types[selectedCourseIndex].max} />
 
       <ShowSchedule />
 

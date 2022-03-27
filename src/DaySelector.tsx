@@ -1,13 +1,22 @@
-import { useState } from 'react'
-
-export const DaySelector = ({ max }: { max: number }) => {
-  const [day, setDay] = useState(0)
+export const DaySelector = ({
+  setDay,
+  day,
+  max,
+}: {
+  setDay: (update: (d: number) => number) => void
+  day: number
+  max: number
+}) => {
   return (
     <>
       <p>Day:</p>
-      <button onClick={() => setDay((d) => (d > 0 ? d - 1 : d))}>-</button>
+      <button disabled={day <= 0} onClick={() => setDay((d) => d - 1)}>
+        -
+      </button>
       <input value={day} type="number" disabled />
-      <button onClick={() => setDay((d) => (d < max ? d + 1 : d))}>+</button>
+      <button disabled={day >= max} onClick={() => setDay((d) => d + 1)}>
+        +
+      </button>
 
       <style jsx>{`
         p {
@@ -28,6 +37,11 @@ export const DaySelector = ({ max }: { max: number }) => {
         button:hover {
           background: #fff2;
           cursor: pointer;
+        }
+
+        button:disabled:hover {
+          cursor: not-allowed;
+          background: none;
         }
 
         button {
