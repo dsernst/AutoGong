@@ -15,9 +15,15 @@ module.exports = {
     ecmaVersion: 2018,
     sourceType: 'module',
   },
-  plugins: ['@typescript-eslint', 'react', 'sort-destructure-keys'],
+  plugins: [
+    '@typescript-eslint',
+    'react',
+    'sort-destructure-keys',
+    'sort-keys-fix',
+  ],
   rules: {
     'react/react-in-jsx-scope': 0, // Handled by Next.js
     'sort-destructure-keys/sort-destructure-keys': 2, // style
+    'sort-keys-fix/sort-keys-fix': [2, 'asc', { natural: true }], // style
   },
 }

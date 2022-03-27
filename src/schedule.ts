@@ -12,6 +12,6 @@ export const baseGongSchedule = {
 
 export const vipassanaDaySchedule = {
   ...baseGongSchedule,
-  1420: undefined,
   1350: 3,
+  1420: undefined,
 }

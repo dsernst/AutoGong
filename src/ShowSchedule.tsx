@@ -30,7 +30,7 @@ export const ShowSchedule = ({
           amount && (
             <p key={index}>
               <span style={{ width: 70 }}>{pretty(+time)}</span>
-              <span style={{ width: 23, opacity: 0.4 }}>—</span>
+              <span style={{ opacity: 0.4, width: 23 }}>—</span>
               <span>{amount} times</span>
               {[index, index + 1].includes(nextTimeIndex) && (
                 <NextUpCountdown {...{ amount, targetTime: +time }} />

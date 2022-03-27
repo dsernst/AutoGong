@@ -17,8 +17,8 @@ export const convertTimes = (times: number): string => {
 // Unit tests
 const testCases = {
   27: '12:27 am',
-  800: '8:00 am',
   108: '1:08 am',
+  800: '8:00 am',
   1250: '12:50 pm',
   1545: '3:45 pm',
 }

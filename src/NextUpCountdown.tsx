@@ -6,7 +6,7 @@ export const NextUpCountdown = ({
   amount,
   targetTime,
 }: {
-  amount: number,
+  amount: number
   targetTime: number
 }) => {
   const timeWithSeconds = targetTime * 100
@@ -25,10 +25,10 @@ export const NextUpCountdown = ({
   return (
     <span
       style={{
-        marginLeft: 20,
         fontFamily: 'Courier',
-        opacity: 0.7,
         fontStyle: 'italic',
+        marginLeft: 20,
+        opacity: 0.7,
       }}
     >
       {playing ? `Playing ${amountDone} of ${amount}` : `${timeLeft} from now`}

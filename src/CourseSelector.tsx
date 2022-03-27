@@ -4,10 +4,10 @@ import { DaySelector } from './DaySelector'
 import { ShowSchedule } from './ShowSchedule'
 
 const types = [
-  { name: '10 Day', max: 10, vipassanaDay: 4 },
-  { name: 'Satti<wbr>pathana', max: 7, vipassanaDay: 3 },
-  { name: '3 Day', max: 3 },
-  { name: 'Non Course', max: 0 },
+  { id: '10 Day', max: 10, vipassanaDay: 4 },
+  { id: 'Satti<wbr>pathana', max: 7, vipassanaDay: 3 },
+  { id: '3 Day', max: 3 },
+  { id: 'Non Course', max: 0 },
 ]
 
 export const CourseSelector = () => {
@@ -18,15 +18,15 @@ export const CourseSelector = () => {
     <section>
       <label>Course type:</label>
       <div className="course-buttons">
-        {types.map(({ name }, index) => (
+        {types.map(({ id }, index) => (
           <button
-            key={name}
+            key={id}
             className={selectedCourseIndex === index ? 'active' : ''}
             onClick={() => {
               setSelectedCourseIndex(index)
               setDay(0)
             }}
-            dangerouslySetInnerHTML={{ __html: name }}
+            dangerouslySetInnerHTML={{ __html: id }}
           />
         ))}
       </div>

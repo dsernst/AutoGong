@@ -42,5 +42,5 @@ export const useScheduledAudio = (timeLeft: string, amount: number) => {
     }
   }, [amount, amountDone])
 
-  return { amountDone, playing, isAnotherPlaying: areAnyPlaying && !playing }
+  return { amountDone, isAnotherPlaying: areAnyPlaying && !playing, playing }
 }
