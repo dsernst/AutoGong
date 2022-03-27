@@ -6,8 +6,8 @@ export const NextUpCountdown = ({
   targetTime,
   amount,
 }: {
+  amount: number,
   targetTime: number
-  amount: number
 }) => {
   const timeWithSeconds = targetTime * 100
   const timeLeft = diffMilTime(timeWithSeconds, useCurrentTime())

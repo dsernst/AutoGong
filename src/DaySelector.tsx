@@ -3,9 +3,9 @@ export const DaySelector = ({
   day,
   max,
 }: {
+  day: number,
+  max: number,
   setDay: (update: (d: number) => number) => void
-  day: number
-  max: number
 }) => {
   return (
     <div>
