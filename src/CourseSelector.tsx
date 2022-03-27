@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { DaySelector } from './DaySelector'
 import { ShowSchedule } from './ShowSchedule'
 
 const types = ['10 Day', 'Satti<wbr>pathana', '3 Day', 'Non Course']
@@ -18,6 +19,8 @@ export const CourseSelector = () => {
           />
         ))}
       </div>
+
+      <DaySelector max={10} />
 
       <ShowSchedule />
 
@@ -42,7 +45,7 @@ export const CourseSelector = () => {
 
         button {
           font-size: 20px;
-          padding: 5px 20px;
+          padding: 10px 20px;
           cursor: pointer;
           opacity: 0.6;
           background: none;
