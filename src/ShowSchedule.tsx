@@ -1,4 +1,4 @@
-import { baseGongSchedule } from './schedule'
+import { baseGongSchedule, vipassanaDaySchedule } from './schedule'
 import { convertTimes as pretty } from './convertTimes'
 import { getNextTimeIndex } from './getNextTimeIndex'
 import { useCurrentTimeWithoutSeconds } from './useCurrentTime'
@@ -9,9 +9,11 @@ export const ShowSchedule = ({
 }: {
   isVipassanaDay: boolean
 }) => {
+  const schedule = isVipassanaDay ? vipassanaDaySchedule : baseGongSchedule
+
   const nextTimeIndex = getNextTimeIndex(
     useCurrentTimeWithoutSeconds(),
-    Object.keys(baseGongSchedule).map(Number)
+    Object.keys(schedule).map(Number)
   )
   return (
     <section>
@@ -23,16 +25,19 @@ export const ShowSchedule = ({
 
       <h2>{isVipassanaDay ? 'Vipassana Day ' : ''}Gong Schedule</h2>
 
-      {Object.entries(baseGongSchedule).map(([time, amount], index) => (
-        <p key={index}>
-          <span style={{ width: 70 }}>{pretty(+time)}</span>
-          <span style={{ width: 23, opacity: 0.4 }}>—</span>
-          <span>{amount} times</span>
-          {[index, index + 1].includes(nextTimeIndex) && (
-            <NextUpCountdown {...{ amount, targetTime: +time }} />
-          )}
-        </p>
-      ))}
+      {Object.entries(schedule).map(
+        ([time, amount], index) =>
+          amount && (
+            <p key={index}>
+              <span style={{ width: 70 }}>{pretty(+time)}</span>
+              <span style={{ width: 23, opacity: 0.4 }}>—</span>
+              <span>{amount} times</span>
+              {[index, index + 1].includes(nextTimeIndex) && (
+                <NextUpCountdown {...{ amount, targetTime: +time }} />
+              )}
+            </p>
+          )
+      )}
 
       <style jsx>{`
         section {

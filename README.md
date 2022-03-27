@@ -4,7 +4,7 @@ An automated system to run all the gongs during a [dhamma.org](https://dhamma.or
 
 ## 1st Version Requirements
 
-- [ ] 1. Types of Courses in Settings Option
+- [x] 1. Types of Courses in Settings Option
     a. 10 Day
     b. Sattipatthana (7 Day)
     c. 3 Day
@@ -13,9 +13,9 @@ An automated system to run all the gongs during a [dhamma.org](https://dhamma.or
 - [ ] 4. Automatic detection of non course days and play gong and doha
 - [x] 5. A test button to play gong anytime, to check the quality and sound of output from speaker.
 - [ ] 6. A security passcode to change setting or edit something.
-- [ ] 7. Show day of course in main screen.
-- [ ] 8. Use time format of 12hours and date format of dd/month/year.
-- [ ] 9. System should able to run offline once installed.
+- [x] 7. Show day of course in main screen.
+- [x] 8. Use time format of 12hours and date format of dd/month/year.
+- [x] 9. System should able to run offline once installed.
 - [ ] 10. If mobile goes off by any reason we need a autostart option for app.
 - [ ] 11. Auto launch in mobile screen after unlock.
 

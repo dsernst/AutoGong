@@ -9,3 +9,9 @@ export const baseGongSchedule = {
   1700: 3,
   1750: 5,
 }
+
+export const vipassanaDaySchedule = {
+  ...baseGongSchedule,
+  1420: undefined,
+  1350: 3,
+}
