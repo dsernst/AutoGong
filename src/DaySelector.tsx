@@ -55,6 +55,7 @@ export const DaySelector = ({
 
         button {
           width: 2.7rem;
+          padding: 0; /* Fix iOS horiz center */
         }
 
         input {
