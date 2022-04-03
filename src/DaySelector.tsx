@@ -53,6 +53,7 @@ export const DaySelector = ({
 
         input {
           width: 60px;
+          opacity: 1; /* Fix iOS faded */
         }
 
         /* Hide type=number control arrows */
