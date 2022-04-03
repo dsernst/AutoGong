@@ -10,15 +10,21 @@ export const DaySelector = ({
   return (
     <div>
       <label>Day:</label>
-      <button disabled={day <= 0} onClick={() => setDay((d) => d - 1)}>
-        -
-      </button>
-      <input value={day} type="number" disabled />
-      <button disabled={day >= max} onClick={() => setDay((d) => d + 1)}>
-        +
-      </button>
+      <div className="buttons">
+        <button disabled={day <= 0} onClick={() => setDay((d) => d - 1)}>
+          -
+        </button>
+        <input value={day} type="number" disabled />
+        <button disabled={day >= max} onClick={() => setDay((d) => d + 1)}>
+          +
+        </button>
+      </div>
 
       <style jsx>{`
+        .buttons {
+          display: flex; /* iOS top align */
+        }
+
         label {
           display: block;
           align-self: flex-start;
