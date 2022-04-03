@@ -40,13 +40,15 @@ export const ShowSchedule = ({
       </h2>
 
       {Object.entries(schedule).map(
-        ([time, amount], index) =>
+        ([time, amount], index, list) =>
           amount && (
             <p key={index}>
               <span style={{ width: 70 }}>{pretty(+time)}</span>
               <span style={{ opacity: 0.4, width: 23 }}>—</span>
               <span>{amount} times</span>
-              {[index, index + 1].includes(nextTimeIndex) && (
+              {(nextTimeIndex === -1
+                ? index == list.length - 1 // Handling for last item
+                : [index, index + 1].includes(nextTimeIndex)) && (
                 <NextUpCountdown {...{ amount, targetTime: +time }} />
               )}
             </p>
