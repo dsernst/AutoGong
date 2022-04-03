@@ -3,12 +3,12 @@ import { Card } from '../src/Card'
 export const FooterLinks = () => (
   <div className="grid">
     <Card
-      url="https://github.com/dsernst/DhammaGong/issues"
+      url="https://github.com/dsernst/AutoGong/issues"
       title="Report Issue"
       description="Something not working as expected? Let us know."
     />
     <Card
-      url="https://github.com/dsernst/DhammaGong"
+      url="https://github.com/dsernst/AutoGong"
       title="Code"
       description="View or contribute to this app's source code."
     />

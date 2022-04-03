@@ -12,12 +12,12 @@ export const GetStartedButton = () => {
     <>
       {!activated ? (
         <section>
-          <h1>Welcome to Dhamma Gong!</h1>
+          <h1>Welcome to AutoGong!</h1>
           <Button text="Get Started" onClick={() => setActivated(true)} />
         </section>
       ) : (
         <>
-          <h2>Dhamma Gong</h2>
+          <h2>AutoGong</h2>
           <TestGongButton />
           <CourseSelector />
           <FooterLinks />

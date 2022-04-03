@@ -9,7 +9,7 @@ const Home: NextPage = () => {
   return (
     <main>
       <Head>
-        <title>Dhamma Gong</title>
+        <title>AutoGong</title>
         <meta
           name="description"
           content="Automated gong for Dhamma.org courses"

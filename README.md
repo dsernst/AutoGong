@@ -1,4 +1,4 @@
-# Web-based Dhamma Gong
+# Web-based AutoGong
 
 An automated system to run all the gongs during a [dhamma.org](https://dhamma.org) course.
 
@@ -37,7 +37,7 @@ An automated system to run all the gongs during a [dhamma.org](https://dhamma.or
 ### With above complete, can fully automate 1 year
 
 - [ ] 18. A security passcode to lock settings
-- [ ] 19. Better domain name than https://dhamma-gong.vercel.app/
+- [ ] 19. Better domain name than https://autogong.vercel.app/
 
 ### Unclear requirements:
 
