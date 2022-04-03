@@ -2,24 +2,29 @@ import { convertTimes as pretty } from './convertTimes'
 import { getNextTimeIndex } from './getNextTimeIndex'
 import { NextUpCountdown } from './NextUpCountdown'
 import {
+  Schedule,
   baseGongSchedule,
   nonCourseSchedule,
   vipassanaDaySchedule,
 } from './schedule'
 import { useCurrentTimeWithoutSeconds } from './useCurrentTime'
+import { useTestCountdown } from './useTestCountdown'
 
 export const ShowSchedule = ({
   isNonCourse,
+  isTestCountdown,
   isVipassanaDay,
 }: {
   isNonCourse: boolean
+  isTestCountdown: boolean
   isVipassanaDay: boolean
 }) => {
-  const schedule = isNonCourse
-    ? nonCourseSchedule
-    : isVipassanaDay
-    ? vipassanaDaySchedule
-    : baseGongSchedule
+  const testSchedule = useTestCountdown()
+
+  let schedule: Schedule = baseGongSchedule
+  if (isTestCountdown) schedule = testSchedule
+  if (isNonCourse) schedule = nonCourseSchedule
+  if (isVipassanaDay) schedule = vipassanaDaySchedule
 
   const nextTimeIndex = getNextTimeIndex(
     useCurrentTimeWithoutSeconds(),
@@ -36,8 +41,15 @@ export const ShowSchedule = ({
       <h2>
         {isVipassanaDay ? 'Vipassana Day ' : ''}
         {isNonCourse ? 'Non Course ' : ''}
+        {isTestCountdown ? 'Test ' : ''}
         Gong Schedule
       </h2>
+
+      {isTestCountdown && (
+        <p style={{ opacity: 0.7 }}>
+          This helps to test what happens when the countdowns hit zero
+        </p>
+      )}
 
       {Object.entries(schedule).map(
         ([time, amount], index, list) =>

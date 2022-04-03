@@ -9,6 +9,7 @@ const types = [
   { id: 'Satti<wbr>pathana', max: 7, vipassanaDay: 3 },
   { id: '3 Day', max: 3 },
   { id: 'Non Course', max: 0 },
+  { id: 'Test Countdown', max: 0 },
 ]
 
 export const CourseSelector = () => {
@@ -41,6 +42,7 @@ export const CourseSelector = () => {
       </div>
 
       <ShowSchedule
+        isTestCountdown={selectedCourseIndex === 4}
         isNonCourse={selectedCourseIndex === 3}
         isVipassanaDay={day === types[selectedCourseIndex].vipassanaDay}
       />

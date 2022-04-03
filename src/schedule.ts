@@ -1,3 +1,5 @@
+export type Schedule = Record<number, number | undefined>
+
 export const baseGongSchedule = {
   400: 8,
   420: 8,
