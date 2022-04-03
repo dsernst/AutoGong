@@ -41,6 +41,7 @@ export const DaySelector = ({
           border-radius: 3px;
           font-size: 22px;
           text-align: center;
+          padding: 0; /* Fix iOS btn centering */
         }
 
         button:hover {
@@ -55,7 +56,6 @@ export const DaySelector = ({
 
         button {
           width: 2.7rem;
-          padding: 0; /* Fix iOS horiz center */
         }
 
         input {
